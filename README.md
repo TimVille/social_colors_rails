@@ -5,6 +5,7 @@ Based on [font-awesome](http://fontawesome.io/), rails-social-colors provide off
 Add this line to your application's Gemfile:
 
 ```ruby
+gem 'font-awesome-rails'
 gem 'social_colors_rails'
 ```
 
