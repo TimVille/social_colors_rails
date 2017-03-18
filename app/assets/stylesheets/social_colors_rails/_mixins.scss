@@ -1,0 +1,117 @@
+//
+//  Check if var is in list
+//  params => list, var
+//
+//  output => boolean
+//
+@function contains($list,$var) {
+  @return (null != index($list, $var));
+}
+
+
+//
+//  Prefix property with vendor names
+//  params => property, values, vendors
+//
+//  output => -vendor-property: values
+//            ...
+//            property: values
+//
+@mixin prefix($property, $values, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: $values;
+  }
+
+  // Output standard non-prefixed declaration
+  #{$property}: $values;
+}
+
+
+//
+//  Shadow list generator
+//  params => color, length(number), inset?(str), blur?(px)
+//
+//  output => inset? 1px 1px blur color,
+//            ...,
+//            inset? (length-1)px (length-1)px blur color,
+//            inset? (length)px (length)px blur color
+//
+@function long-shadow($scolor, $length, $inset:"", $blur: $icon-shadow-blur) {
+  $list: ();
+  @for $i from 1 through $length {
+    $list: append($list ,unquote($inset) $i+px $i+px $blur $scolor, comma);
+  }
+  @return $list;
+}
+
+
+//
+//  Extract all names
+//  params => ( (name, color, inverted?), ...)
+//
+//  output => (name, ...)
+//
+@function brand-names($list) {
+  $l: ();
+  @each $name in $list {
+    $l: append($l, #{nth($name, 1)}, comma);
+  }
+  @return $l;
+}
+
+
+//
+//  Extract all not-inverted names
+//  params => ( (name, color, inverted?), ...)
+//
+//  output => (name, ...)
+//
+@function normal-brand-names($list) {
+  @return nth(classified-brand-names($list), 1);
+}
+
+
+//
+//  Retrieve all inverted names
+//  params => ( (name, color, inverted?), ...)
+//
+//  output => (name, ...)
+//
+@function inverted-brand-names($list) {
+  @return nth(classified-brand-names($list), 2);
+}
+
+
+//
+//  Classify not-inverted and inverted names
+//  params => ( (name, color, inverted?), ...)
+//
+//  output => ( (not-inverted-name, ...), (inverted-name, ...) )
+//
+@function classified-brand-names($list) {
+  $inverse: ();
+  $normal: ();
+  @each $name in $list {
+    @if length($name) == 3 {
+      $inverse: append($inverse, nth($name, 1), comma);
+    } @else {
+      $normal: append($normal, nth($name, 1), comma);
+    }
+  }
+  @return ($normal $inverse);
+}
+
+
+//
+//  Transform name-list to class-list
+//  params => (name, ...)
+//
+//  output => (".name", ...)
+//
+@function list_to_classes($list) {
+  $l: ();
+  @each $name in $list {
+    $l: append($l, ".#{$name}", comma);
+  }
+  @return $l;
+}

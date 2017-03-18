@@ -1,0 +1,16 @@
+{
+  "name": "social_colors",
+  "version": "1.0.0",
+  "description": "Based on [font-awesome](http://fontawesome.io/), social-colors provide official colors of social brand icons",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Timothée Ville <tim.ville@me.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-cssmin": "^2.0.0",
+    "grunt-contrib-sass": "^1.0.0"
+  }
+}

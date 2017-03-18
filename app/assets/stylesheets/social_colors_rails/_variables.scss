@@ -1,0 +1,96 @@
+//
+// Brand name list ( (name, color, inverted?), ... )
+//
+$social-list: (
+  amazon          #ff9900,
+  android         #a4c639,
+  behance         #1769ff,
+  bitbucket       #205081,
+  codepen         #0ebeff,
+  delicious       #3399ff,
+  deviantart      #05cc47,
+  dropbox         #007ee5,
+  etsy            #d5641c,
+  facebook        #3b5998,
+  firefox         #e66000,
+  flickr          #0063dc,
+  github          #333333  inverted,
+  gitlab          #fca326,
+  google-plus     #db3236,
+  houzz           #7ac142,
+  instagram       #405de6,
+  lastfm          #d51007,
+  linkedin        #0077b5,
+  pinterest       #cb2027,
+  reddit          #ff4500,
+  rss             #f26522,
+  skype           #00aff0,
+  slack           #6ecadc,
+  snapchat        #fffc00,
+  soundcloud      #ff8800,
+  spotify         #2ebd59,
+  stack-exchange  #1e5397,
+  stack-overflow  #f48024,
+  steam           #00adee,
+  stumbleupon     #eb4924,
+  trello          #0079bf,
+  tripadvisor     #589442,
+  tumblr          #35465c  inverted,
+  twitter         #1da1f2,
+  viadeo          #f07355,
+  vimeo           #162221  inverted,
+  vine            #00b488,
+  wechat          #7bb32e,
+  whatsapp        #075e54  inverted,
+  yahoo           #410093  inverted,
+  yelp            #af0606,
+  youtube         #e52d27,
+  envelope        #333333  inverted
+);
+
+
+//
+// Stack parameters
+//
+$stack-lighten-amount:       10%      !default;
+$stack-darken-amount:        10%      !default;
+$stack-alpha-amount:         0        !default;
+$stack-hover-color:          #424242  !default;
+$stack-hover-color-inverse:  #424242  !default;
+
+$stack-shadow-color:         transparentize(#000, 0.8) !default;
+$stack-shadow-length:        6        !default;
+$stack-shadow-blur:          4px      !default;
+
+$stack-square-o-width:       3px      !default;
+$stack-square-o-width-2x:    4px      !default;
+$stack-square-o-width-3x:    5px      !default;
+$stack-square-o-width-4x:    6px      !default;
+
+$stack-square-radius:        20%      !default;
+
+$stack-4x:                   3em      !default;
+$stack-3x:                   2.5em    !default;
+$stack-2x:                   2em      !default;
+
+$stack-anim-duration:        .25s     !default;
+$stack-anim-ease:            ease     !default;
+
+
+//
+// Font-awesome icon shadow parameters
+//
+$icon-shadow-blur:           1px      !default;
+$icon-shadow-lighten-amount: 20%      !default;
+$icon-shadow-darken-amount:  30%      !default;
+$icon-shadow-alpha-amount:   0.7      !default;
+$icon-shadow-color:          #000     !default;
+$icon-shadow-color-inverse:  #000     !default;
+$icon-shadow-length:         100      !default;
+$icon-shadow-length-o:       6        !default;
+
+$icon-color:                 #fff     !default;
+$icon-color-lighten-amount:  10%      !default;
+
+$icon-anim-duration:         .25s     !default;
+$icon-anim-ease:             ease     !default;
