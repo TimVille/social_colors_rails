@@ -16,4 +16,3 @@ gemspec
 gem "font-awesome-rails"
 
 gem 'rspec-rails', group: [:development]
-gem 'factory_girl', group: [:development]
