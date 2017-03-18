@@ -2,7 +2,7 @@
 Based on [font-awesome](http://fontawesome.io/), rails-social-colors provide official colors of social brand icons
 
 ## Installation
-Add this line to your application's Gemfile:
+Add these line to your application's Gemfile:
 
 ```ruby
 gem 'font-awesome-rails'
@@ -17,6 +17,7 @@ For simple use, add it to your rails asset-pipeline
 
 ```css
 /*
+ *= require font-awesome
  *= require social_colors_rails
  * Or for production
  *= require social_colors_rails.min
@@ -26,6 +27,7 @@ in your `application.css` file
 
 Or if you work with SASS
 ```scss
+@import "font-awesome";
 @import "social_colors_rails";
 ```
 
@@ -35,6 +37,7 @@ You can customize the social_colors rails plugin by importing the sass file and 
 // Import your custom variables before the social_colors lib
 @import "_custom_variables";
 
+@import 'font-awesome";
 @import "social_colors_rails/init";
 ```
 
