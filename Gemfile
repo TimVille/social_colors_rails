@@ -13,6 +13,4 @@ gemspec
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
 
-gem "font-awesome-rails"
-
 gem 'rspec-rails', group: [:development]

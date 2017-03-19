@@ -2,7 +2,8 @@ PATH
   remote: .
   specs:
     social_colors_rails (0.1.0)
-      rails (~> 5.0.2)
+      font-awesome-rails (>= 4.7.0.1)
+      rails (>= 4.2)
 
 GEM
   remote: https://rubygems.org/
@@ -131,7 +132,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  font-awesome-rails
   rspec-rails
   social_colors_rails!
   sqlite3
