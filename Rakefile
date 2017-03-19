@@ -24,4 +24,4 @@ load 'rails/tasks/statistics.rake'
 
 require 'bundler/gem_tasks'
 
-task :default => "app:spec"
+task :default => :build
