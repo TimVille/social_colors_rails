@@ -1,4 +1,5 @@
 require 'rails_helper'
+require 'font-awesome-rails'
 
 # Specs in this file have access to a helper object that includes
 # the ApplicationHelper. For example:
@@ -12,6 +13,10 @@ require 'rails_helper'
 # end
 module SocialColorsRails
   RSpec.describe ApplicationHelper, type: :helper do
-    pending "add some examples to (or delete) #{__FILE__}"
+
+    it 'has access to the helper methods defined in the module' do
+      expect(social_tag).to be(:available)
+    end
+
   end
 end
