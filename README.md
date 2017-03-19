@@ -1,3 +1,4 @@
+[![Gem Version](https://badge.fury.io/rb/social_colors_rails.svg)](https://badge.fury.io/rb/social_colors_rails)
 [![Build Status](https://travis-ci.org/TimVille/social_colors_rails.svg?branch=master)](https://travis-ci.org/TimVille/social_colors_rails)
 
 # Social-colors-rails
