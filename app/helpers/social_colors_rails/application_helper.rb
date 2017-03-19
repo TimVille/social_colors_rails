@@ -1,5 +1,6 @@
 module SocialColorsRails
   module ApplicationHelper
+    include ::FontAwesome::Rails::IconHelper
     ###
     #
     # Create social link tag given name, url and possible title, style, size and nofollow modifiers.
@@ -43,17 +44,26 @@ module SocialColorsRails
     #
     ###
 
-    def social_tag(name = "facebook", url = "#", title: nil, style: "circle", size: nil, nofollow: true)
+    def social_tag(name = "facebook", href = "#", url: nil, title: nil, style: "circle", size: nil, external: true, nofollow: true)
       classes = "icon-stack stack-#{style} #{name}" + (size.nil? ? "" : " stack-#{size}")
+      location = href
       options = {
         class: classes,
         target: "_blank",
-        rel: "external" + (nofollow ? " nofollow" : "")
       }
+
+      if !url.nil?
+        location = url
+      end
+
+      if external
+        options[:rel] = "external" + (nofollow ? " nofollow" : "")
+      end
+
       if !title.nil?
         options[:title] = title
       end
-      html = link_to(fa_icon(name), url, options)
+      html = link_to(fa_icon(name), location, options)
       html
     end
   end

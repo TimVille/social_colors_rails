@@ -37,7 +37,7 @@ You can customize the social_colors rails plugin by importing the sass file and 
 // Import your custom variables before the social_colors lib
 @import "_custom_variables";
 
-@import 'font-awesome";
+@import "font-awesome";
 @import "social_colors_rails/init";
 ```
 
@@ -47,6 +47,16 @@ You can customize the social_colors rails plugin by importing the sass file and 
 
 The prefered method is to use the `social_tag` helper
 ```ruby
+
+social_tag
+#  => <a class="icon-stack stack-circle facebook" target="_blank" rel="external nofollow" href="#">
+#       <i class="fa fa-facebook"></i>
+#     </a>
+
+social_tag url: "https://www.facebook.com/devsbrain/"
+#  => <a class="icon-stack stack-square facebook" target="_blank" rel="external nofollow" href="https://www.facebook.com/devsbrain/">
+#       <i class="fa fa-facebook"></i>
+#     </a>
 
 social_tag "github", "https://github.com/TimVille"
 #  => <a class="icon-stack stack-circle github" target="_blank" rel="external nofollow" href="https://github.com/TimVille">
@@ -63,13 +73,18 @@ social_tag "github", "https://github.com/TimVille", size: "2x"
 #       <i class="fa fa-github"></i>
 #     </a>
 
-social_tag "github", "https://github.com/TimVille", style: "square-o", size: "3x"
-#  => <a class="icon-stack stack-square-o github stack-3x" target="_blank" rel="external nofollow" href="https://github.com/TimVille">
+social_tag "github", "https://github.com/TimVille", title: "My awesome link title"
+#  => <a class="icon-stack stack-circle github" target="_blank" rel="external nofollow" title="My awesome link title" href="https://github.com/TimVille">
 #       <i class="fa fa-github"></i>
 #     </a>
 
-social_tag "github", "https://github.com/TimVille", size: "3x", title: "My awesome link title"
-#  => <a class="icon-stack stack-square-o github stack-3x" target="_blank" rel="external nofollow" title="My awesome link title" href="https://github.com/TimVille">
+social_tag "github", "https://github.com/TimVille", nofollow: false
+#  => <a class="icon-stack stack-circle github" target="_blank" rel="external" href="https://github.com/TimVille">
+#       <i class="fa fa-github"></i>
+#     </a>
+
+social_tag "github", "https://github.com/TimVille", external: false
+#  => <a class="icon-stack stack-circle github" target="_blank" href="https://github.com/TimVille">
 #       <i class="fa fa-github"></i>
 #     </a>
 ```

@@ -1,3 +1,5 @@
+require "font-awesome-rails"
+
 module SocialColorsRails
   class Engine < ::Rails::Engine
     isolate_namespace SocialColorsRails

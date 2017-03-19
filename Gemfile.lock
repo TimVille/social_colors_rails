@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    social_colors_rails (0.1.0)
+    social_colors_rails (0.1.2)
       font-awesome-rails (>= 4.7.0.1)
       rails (>= 4.2)
 
@@ -95,11 +95,18 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
     rake (12.0.0)
+    rspec (3.5.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
     rspec-core (3.5.4)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.5.0)
+    rspec-html-matchers (0.9.1)
+      nokogiri (~> 1)
+      rspec (>= 3.0.0.a, < 4)
     rspec-mocks (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.5.0)
@@ -132,6 +139,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  nokogiri
+  rspec-html-matchers
   rspec-rails
   social_colors_rails!
   sqlite3
