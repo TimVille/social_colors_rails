@@ -14,13 +14,18 @@ Gem::Specification.new do |s|
   s.description = "Based on font-awesome, rails-social-colors provide official colors of social brand icons"
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
+  s.files = Dir["{app,lib,spec}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
-  s.add_dependency "rails", ">= 4.2"
+  s.add_dependency "railties", ">= 3.2", "< 5.1"
   s.add_dependency "font-awesome-rails", '>= 4.7.0.1'
+
+  s.add_development_dependency "activesupport"
+  s.add_development_dependency "sass-rails"
+  s.add_development_dependency "sqlite3"
 
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "nokogiri"
   s.add_development_dependency "rspec-html-matchers"
-  s.add_development_dependency "sqlite3"
+
+  s.required_ruby_version = '>= 1.9.3'
 end

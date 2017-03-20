@@ -1,23 +1,19 @@
 require_relative 'boot'
 
 # Pick the frameworks you want:
-require "active_record/railtie"
-require "action_controller/railtie"
-require "action_view/railtie"
-require "action_mailer/railtie"
-require "active_job/railtie"
-require "action_cable/engine"
-# require "rails/test_unit/railtie"
 require "sprockets/railtie"
 
-Bundler.require(*Rails.groups)
-require "social_colors_rails"
+Bundler.require(:default, :development)
 
 module TestApp
   class Application < Rails::Application
-    # Settings in config/environments/* take precedence over those specified here.
-    # Application configuration should go into files in config/initializers
-    # -- all .rb files in that directory are automatically loaded.
+    config.encoding = "utf-8"
+    config.assets.enabled = true
+    config.assets.version = '1.0'
+
+    # replacement for environments/*.rb
+    config.active_support.deprecation = :stderr
+    config.eager_load = false
+    config.active_support.test_order = :random rescue nil
   end
 end
-
