@@ -3,7 +3,7 @@
 
 # Social-colors-rails
 Based on [font-awesome](http://fontawesome.io/), social_colors_rails provide official colors of social brand icons.
-See them on the [Social colors rails](https://timville.github.io/social_colors_rails/example.html) official page.
+See them on the [Social colors rails](https://timville.github.io/social_colors_rails/example.html) example page.
 
 ## Installation
 Add these line to your application's Gemfile:
