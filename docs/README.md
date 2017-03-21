@@ -206,30 +206,29 @@ $btn-bg-hover-lighten-amount:  3%;
 ---
 
 ## Available brand colors
-  Brand names       |               |               |
-  :----------------:|:-------------:|:-------------:|
-  Amazon            | Android       |
-  Behance           | Bitbucket     |
-  Codepen           |               |
-  Delicious         | Deviantart    | Dropbox
-  Etsy              |               |
-  Facebook          | Firefox       | Flickr
-  Github            | Gitlab        | Google-plus
-  Houzz             |               |
-  Instagram         |               |
-  Lastfm            | Linkedin      |
-  Pinterest         |               |
-  Reddit            | Rss           |
-  Skype             | Slack         | Snapchat
-  Soundcloud        | Spotify       | Stack-Exchange
-  Stack-Overflow    | Steam         | Stumbleupon
-  Trello            | Tripadvisor   | Tumblr
-  Twitter           |               |
-  Viadeo            | Vimeo         | Vine
-  Wechat            | Whatsapp      |
-  Yahoo             | Yelp          | Youtube
-  Envelope          |               |
 
+### Brand names
+- Amazon, Android
+- Behance, Bitbucket
+- Codepen
+- Delicious, Deviantart, Dropbox
+- Etsy
+- Facebook, Firefox, Flickr
+- Github, Gitlab, Google-plus
+- Houzz
+- Instagram
+- Lastfm, Linkedin
+- Pinterest
+- Reddit, Rss
+- Skype, Slack, Snapchat
+- Soundcloud, Spotify, Stack-Exchange
+- Stack-Overflow, Steam, Stumbleupon
+- Trello, Tripadvisor, Tumblr
+- Twitter
+- Viadeo, Vimeo, Vine
+- Wechat, Whatsapp
+- Yahoo, Yelp, Youtube
+- Envelope
 
 ---
 
