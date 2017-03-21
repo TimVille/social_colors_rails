@@ -2,8 +2,8 @@
 [![Build Status](https://travis-ci.org/TimVille/social_colors_rails.svg?branch=master)](https://travis-ci.org/TimVille/social_colors_rails)
 
 # Social-colors-rails
-Based on [font-awesome](http://fontawesome.io/), rails-social-colors provide official colors of social brand icons.
-See them on the [Rails social colors](https://timville.github.io/social_colors_rails/) official page.
+Based on [font-awesome](http://fontawesome.io/), social_colors_rails provide official colors of social brand icons.
+See them on the [Social colors rails](https://timville.github.io/social_colors_rails/) official page.
 
 ## Installation
 Add these line to your application's Gemfile:
@@ -36,7 +36,7 @@ Or if you work with SASS
 ```
 
 ### -- Customized --
-You can customize the social_colors rails plugin by importing the sass file and overwrite variables.
+You can customize the social_colors_rails plugin by importing the sass file and overwrite variables.
 ```scss
 // Import your custom variables before the social_colors lib
 @import "_custom_variables";
@@ -93,7 +93,7 @@ social_tag "github", "https://github.com/TimVille", external: false
 #     </a>
 ```
 
-In order to provide a context to the icons, you need to wrap your font-awesome icon with
+But if you prefer, you can just wrap your font-awesome icon with these classes
 ```html
 <div class="icon-stack |brand-name|"></div>
 ```
