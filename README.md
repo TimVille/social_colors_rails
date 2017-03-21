@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/TimVille/social_colors_rails.svg?branch=master)](https://travis-ci.org/TimVille/social_colors_rails)
 
 # Social-colors-rails
-Based on [font-awesome](http://fontawesome.io/), social-colors_rails provide official colors of social brand icons.
+Based on [font-awesome](http://fontawesome.io/), social_colors_rails provide official colors of social brand icons.
 See them on the [Social colors rails](https://timville.github.io/social_colors_rails/) official page.
 
 ## Installation
