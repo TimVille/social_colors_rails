@@ -1,5 +1,5 @@
 {
-  "name": "social_colors",
+  "name": "social_colors_rails",
   "version": "1.0.0",
   "description": "Based on [font-awesome](http://fontawesome.io/), social-colors provide official colors of social brand icons",
   "main": "Gruntfile.js",

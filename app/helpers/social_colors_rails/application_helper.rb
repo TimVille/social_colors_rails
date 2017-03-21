@@ -44,7 +44,7 @@ module SocialColorsRails
     #
     ###
 
-    def social_tag(name = "facebook", href = "#", url: nil, title: nil, style: "circle", size: nil, external: true, nofollow: true)
+    def social_tag(name = "facebook", href = "#", button, url: nil, title: nil, style: "circle", size: nil, external: true, nofollow: true)
       classes = "icon-stack stack-#{style} #{name}" + (size.nil? ? "" : " stack-#{size}")
       location = href
       options = {

@@ -1,0 +1,20 @@
+.btn-social {
+
+  border: none;
+
+  color: #fff;
+  overflow: hidden;
+}
+
+.btn-social,
+.btn-social-outline {
+  padding: .5rem .75rem;
+  border-radius: $btn-outline-radius;
+}
+
+#{list_to_classes(inverted-brand-names($social-list), "btn-social.")} {
+  &:hover,
+  &:focus {
+    color: #fff;
+  }
+}

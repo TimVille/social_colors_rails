@@ -52,45 +52,56 @@ $social-list: (
 //
 // Stack parameters
 //
-$stack-lighten-amount:       10%      !default;
-$stack-darken-amount:        10%      !default;
-$stack-alpha-amount:         0        !default;
-$stack-hover-color:          #424242  !default;
-$stack-hover-color-inverse:  #424242  !default;
+$stack-lighten-amount:         10%      !default;
+$stack-darken-amount:          10%      !default;
+$stack-alpha-amount:           0        !default;
+$stack-hover-color:            #424242  !default;
+$stack-hover-color-inverse:    #424242  !default;
 
-$stack-shadow-color:         transparentize(#000, 0.8) !default;
-$stack-shadow-length:        6        !default;
-$stack-shadow-blur:          4px      !default;
+$stack-shadow-color:           transparentize(#000, 0.8) !default;
+$stack-shadow-length:          6        !default;
+$stack-shadow-blur:            4px      !default;
 
-$stack-square-o-width:       3px      !default;
-$stack-square-o-width-2x:    4px      !default;
-$stack-square-o-width-3x:    5px      !default;
-$stack-square-o-width-4x:    6px      !default;
+$border-width:                 3px      !default;
+$border-width-2x:              4px      !default;
+$border-width-3x:              5px      !default;
+$border-width-4x:              6px      !default;
 
-$stack-square-radius:        20%      !default;
+$stack-square-radius:          20%      !default;
+$btn-outline-radius:           8px      !default;
 
-$stack-4x:                   3em      !default;
-$stack-3x:                   2.5em    !default;
-$stack-2x:                   2em      !default;
+$stack-4x:                     3em      !default;
+$stack-3x:                     2.5em    !default;
+$stack-2x:                     2em      !default;
 
-$stack-anim-duration:        .25s     !default;
-$stack-anim-ease:            ease     !default;
+$stack-anim-duration:          .3s      !default;
+$stack-anim-ease:              ease     !default;
 
 
 //
 // Font-awesome icon shadow parameters
 //
-$icon-shadow-blur:           1px      !default;
-$icon-shadow-lighten-amount: 20%      !default;
-$icon-shadow-darken-amount:  30%      !default;
-$icon-shadow-alpha-amount:   0.7      !default;
-$icon-shadow-color:          #000     !default;
-$icon-shadow-color-inverse:  #000     !default;
-$icon-shadow-length:         100      !default;
-$icon-shadow-length-o:       6        !default;
+$icon-shadow-blur:             1px      !default;
+$icon-shadow-lighten-amount:   20%      !default;
+$icon-shadow-darken-amount:    30%      !default;
+$icon-shadow-alpha-amount:     0.7      !default;
+$icon-shadow-color:            #000     !default;
+$icon-shadow-color-inverse:    #000     !default;
+$icon-shadow-length:           100      !default;
+$icon-shadow-length-o:         6        !default;
 
-$icon-color:                 #fff     !default;
-$icon-color-lighten-amount:  10%      !default;
+$icon-color:                   #fff     !default;
 
-$icon-anim-duration:         .25s     !default;
-$icon-anim-ease:             ease     !default;
+$icon-hover-lighten-amount:    10%      !default;
+$icon-bg-hover-lighten-amount: 3%       !default;
+
+$icon-anim-duration:           .4s      !default;
+$icon-anim-ease:               ease     !default;
+
+
+//
+//  Button parameters
+//
+
+$btn-hover-lighten-amount:     10%      !default;
+$btn-bg-hover-lighten-amount:  3%       !default;

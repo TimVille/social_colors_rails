@@ -1,0 +1,138 @@
+.btn-social,
+.stack-circle,
+.stack-square {
+  &:hover,
+  &:focus {
+    background-color: $stack-hover-color !important;
+  }
+}
+
+.btn-social,
+.icon-stack.stack-circle,
+.icon-stack.stack-square {
+  &:hover,
+  &:focus {
+
+    box-shadow: long-shadow($stack-shadow-color, $stack-shadow-length, "inset", $stack-shadow-blur);
+
+    &,
+    .fa {
+      text-shadow: long-shadow($icon-shadow-color, $icon-shadow-length);
+    }
+  }
+}
+
+.icon-stack,
+.btn-social,
+.btn-social-outline {
+  &,
+  &:hover,
+  &:focus {
+    @include prefix(transition,
+    (
+      box-shadow $stack-anim-duration $stack-anim-ease,
+      text-shadow $icon-anim-duration $icon-anim-ease,
+      color $stack-anim-duration $stack-anim-ease
+    ),
+    webkit moz o);
+  }
+
+  &:hover .fa,
+  &:focus .fa {
+    @include prefix(transition,
+    (
+      text-shadow $icon-anim-duration $icon-anim-ease,
+      color $stack-anim-duration $stack-anim-ease
+    ),
+    webkit moz o);
+  }
+
+}
+
+.icon-stack,
+.btn-social,
+.btn-social-outline {
+  color: $icon-color;
+}
+
+.btn-social-outline,
+.stack-square-o {
+  border-width: $border-width;
+  border-style: solid;
+  background-color: transparent;
+}
+
+.btn-4x,
+.stack-4x {
+  font-size: $stack-4x;
+  border-width: $border-width-4x;
+}
+
+.btn-3x,
+.stack-3x {
+  font-size: $stack-3x;
+  border-width: $border-width-3x;
+}
+
+.btn-2x,
+.stack-2x {
+  font-size: $stack-2x;
+  border-width: $border-width-2x;
+}
+
+@each $name in $social-list {
+
+  // Set default shadow and stack color
+  $is-inverse: false;
+
+  @if contains(inverted-brand-names($social-list), nth($name, 1)) {
+    $is-inverse: true;
+  }
+
+  .#{nth($name, 1)}.btn-social,
+  .#{nth($name, 1)}.stack-circle,
+  .#{nth($name, 1)}.stack-square {
+    background-color: nth($name, 2);
+  }
+
+  // for each brand names
+  .#{nth($name, 1)} {
+    &.btn-social,
+    &.stack-circle,
+    &.stack-square {
+
+      &:hover,
+      &:focus {
+        @if $is-inverse == false {
+          &, .fa {
+            color: lighten(nth($name, 2), $icon-hover-lighten-amount);
+          }
+        } @else {
+          background-color: lighten(nth($name, 2), $icon-bg-hover-lighten-amount);
+        }
+      }
+    }
+
+    &.stack-square-o,
+    &.btn-social-outline {
+
+      border-color: nth($name, 2);
+
+      &,
+      .fa-#{nth($name, 1)} {
+        color: nth($name, 2);
+      }
+
+      &:hover,
+      &:focus {
+
+        box-shadow: long-shadow(transparentize(lighten(nth($name, 2), $icon-shadow-lighten-amount), $icon-shadow-alpha-amount), $icon-shadow-length-o, "inset");
+
+        &,
+        .fa-#{nth($name, 1)} {
+          text-shadow: long-shadow(transparentize(lighten(nth($name, 2), $icon-shadow-lighten-amount), $icon-shadow-alpha-amount), $icon-shadow-length-o);
+        }
+      }
+    }
+  }
+}

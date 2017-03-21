@@ -1,0 +1,27 @@
+.icon-stack {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 2em;
+  height: 2em;
+
+  overflow: hidden;
+}
+
+.icon-stack .fa {
+  color: inherit;
+}
+
+.stack-circle {
+  border-radius: 50%;
+}
+
+.stack-square {
+  border-radius: $stack-square-radius;
+}
+
+.stack-square-o {
+  border-radius: $stack-square-radius;
+}

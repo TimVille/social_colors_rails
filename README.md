@@ -2,7 +2,8 @@
 [![Build Status](https://travis-ci.org/TimVille/social_colors_rails.svg?branch=master)](https://travis-ci.org/TimVille/social_colors_rails)
 
 # Social-colors-rails
-Based on [font-awesome](http://fontawesome.io/), rails-social-colors provide official colors of social brand icons
+Based on [font-awesome](http://fontawesome.io/), rails-social-colors provide official colors of social brand icons.
+See them on the [Rails social colors](https://timville.github.io/social_colors_rails/) official page.
 
 ## Installation
 Add these line to your application's Gemfile:
@@ -96,6 +97,26 @@ In order to provide a context to the icons, you need to wrap your font-awesome i
 ```html
 <div class="icon-stack |brand-name|"></div>
 ```
+
+## --NEW!--
+New button are available with text possibilities.
+To add it with a rails helper, just use a link_to
+```ruby
+link_to "Your text", "#", class: "btn btn-social btn-|size| |brand-name|"
+```
+
+```html
+<!-- Plain button -->
+<a href="#" class="btn btn-social |brand-name| btn-|size|">
+  Your text here <i class="fa fa-|brand-name|"></i>
+</a>
+
+<!-- Outline button -->
+<a href="#" class="btn btn-social-outline |brand-name| btn-|size|">
+  Your text here <i class="fa fa-|brand-name|"></i>
+</a>
+```
+
 ### -- Options --
 
 Options are available for stack style and stack size.
@@ -106,10 +127,10 @@ Add them next to `icon-stack` class to apply them!
 `stack-square`
 `stack-square-o`
 
-#### Stack sizes
-`stack-2x`
-`stack-3x`
-`stack-4x`
+#### Stack & button Sizes
+`(stack||btn)-2x`
+`(stack||btn)-3x`
+`(stack||btn)-4x`
 
 
 ### -- Sass variables --
@@ -117,48 +138,59 @@ Add them next to `icon-stack` class to apply them!
 //
 // Stack parameters
 //
-$stack-lighten-amount:       10%;
-$stack-darken-amount:        10%;
-$stack-alpha-amount:         0;
-$stack-hover-color:          #424242;
-$stack-hover-color-inverse:  #424242;
+$stack-lighten-amount:         10%;
+$stack-darken-amount:          10%;
+$stack-alpha-amount:           0;
+$stack-hover-color:            #424242;
+$stack-hover-color-inverse:    #424242;
 
-$stack-shadow-color:         transparentize(#000, 0.8);
-$stack-shadow-length:        6;
-$stack-shadow-blur:          4px;
+$stack-shadow-color:           transparentize(#000, 0.8);
+$stack-shadow-length:          6;
+$stack-shadow-blur:            4px;
 
-$stack-square-o-width:       3px;
-$stack-square-o-width-2x:    4px;
-$stack-square-o-width-3x:    5px;
-$stack-square-o-width-4x:    6px;
+$border-width:                 3px;
+$border-width-2x:              4px;
+$border-width-3x:              5px;
+$border-width-4x:              6px;
 
-$stack-square-radius:        20%;
+$stack-square-radius:          20%;
+$btn-outline-radius:           8px;
 
-$stack-4x:                   3em;
-$stack-3x:                   2.5em;
-$stack-2x:                   2em;
+$stack-4x:                     3em;
+$stack-3x:                     2.5em;
+$stack-2x:                     2em;
 
-$stack-anim-duration:        .25s;
-$stack-anim-ease:            ease;
+$stack-anim-duration:          .3s;
+$stack-anim-ease:              ease;
 
 
 //
 // Font-awesome icon shadow parameters
 //
-$icon-shadow-blur:           1px;
-$icon-shadow-lighten-amount: 20%;
-$icon-shadow-darken-amount:  30%;
-$icon-shadow-alpha-amount:   0.7;
-$icon-shadow-color:          #000;
-$icon-shadow-color-inverse:  #000;
-$icon-shadow-length:         100;
-$icon-shadow-length-o:       6;
+$icon-shadow-blur:             1px;
+$icon-shadow-lighten-amount:   20%;
+$icon-shadow-darken-amount:    30%;
+$icon-shadow-alpha-amount:     0.7;
+$icon-shadow-color:            #000;
+$icon-shadow-color-inverse:    #000;
+$icon-shadow-length:           100;
+$icon-shadow-length-o:         6;
 
-$icon-color:                 #fff;
-$icon-color-lighten-amount:  10%;
+$icon-color:                   #fff;
 
-$icon-anim-duration:         .25s;
-$icon-anim-ease:             ease;
+$icon-hover-lighten-amount:    10%;
+$icon-bg-hover-lighten-amount: 3%;
+
+$icon-anim-duration:           .4s;
+$icon-anim-ease:               ease;
+
+
+//
+//  Button parameters
+//
+
+$btn-hover-lighten-amount:     10%;
+$btn-bg-hover-lighten-amount:  3%;
 ```
 
 ---

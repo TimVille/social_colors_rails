@@ -17,13 +17,13 @@
 //            ...
 //            property: values
 //
-@mixin prefix($property, $values, $prefixes: ()) {
+@mixin prefix( $property, $values, $prefixes: () ) {
   @each $prefix in $prefixes {
-    #{'-' + $prefix + '-' + $property}: $values;
+    #{'-' + $prefix + '-' + $property}: #{$values};
   }
 
   // Output standard non-prefixed declaration
-  #{$property}: $values;
+  #{$property}: #{$values};
 }
 
 
@@ -108,10 +108,10 @@
 //
 //  output => (".name", ...)
 //
-@function list_to_classes($list) {
+@function list_to_classes($list, $prefix: "") {
   $l: ();
   @each $name in $list {
-    $l: append($l, ".#{$name}", comma);
+    $l: append($l, ".#{$prefix}#{$name}", comma);
   }
   @return $l;
 }
