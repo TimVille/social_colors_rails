@@ -45,7 +45,7 @@ module SocialColorsRails
 
       context "with name & href" do
         it 'generate correct url link' do
-          expect( brand ).not_to have_tag('a[href="http://twitter.com"].twitter')
+          expect( brand ).to have_tag('a.twitter[href="http://twitter.com/"]')
         end
       end
 
